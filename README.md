@@ -114,13 +114,13 @@ fraud-guard-detection/
 └── README.md             # Project documentation
 ```
 
-<!-- ## Academic Project 🎓
+## Academic Project 🎓
 
 **Team:** Group 4
 - Cecil Oiku
 - Katelyn Siu  
 - Israel Maikyau
-- Meet Patel -->
+- Meet Patel
 
 
 ## License & Disclaimer ⚠️
