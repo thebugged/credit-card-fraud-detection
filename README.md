@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="#" target="_blank">
-      <img src="https://github.com/user-attachments/assets/3fd9f8c2-f9e2-49fb-8d45-852c8895470f" alt="Fraud Guard Banner">
+      <img src="https://github.com/user-attachments/assets/b30687ae-afb2-4f35-aa0d-9ea922809394" alt="Fraud Guard Banner">
     </a>
   <br />
 
