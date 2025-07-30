@@ -10,8 +10,6 @@
     <img src="https://img.shields.io/badge/-TensorFlow-black?style=for-the-badge&logoColor=white&logo=tensorflow&color=FF6F00" alt="tensorflow" />
     <img src="https://img.shields.io/badge/-scikit_learn-black?style=for-the-badge&logoColor=white&logo=scikitlearn&color=F7931E" alt="scikit-learn" />
     <img src="https://img.shields.io/badge/-Streamlit-black?style=for-the-badge&logoColor=white&logo=streamlit&color=FF4B4B" alt="streamlit" />
-    <img src="https://img.shields.io/badge/-Azure-black?style=for-the-badge&logoColor=white&logo=microsoftazure&color=0078D4" alt="azure" />
-  </div>
 
   <h3 align="center">🛡️ Fraud Guard - Credit Card Fraud Detection</h3>
 
@@ -91,14 +89,18 @@ streamlit run main.py
 
 The application will be available in your browser at http://localhost:8501.
 
-## Model Performance 📊
+<br/>
+<br/>
+
+## Model Performance
 
 | Dataset | Accuracy | Precision | Recall | AUC-ROC |
 |---------|----------|-----------|---------|---------|
 | European Model | 95.68% | 97.56% | 93.71% | 99.08% |
 | Synthetic Model | 53.00% | 33.37% | 41.11% | 49.93% |
 
-## Project Structure 📁
+
+## Project Structure
 
 ```
 fraud-guard-detection/
@@ -114,7 +116,8 @@ fraud-guard-detection/
 └── README.md             # Project documentation
 ```
 
-## Academic Project 🎓
+
+## Academic Project
 
 **Team:** Group 4
 - Cecil Oiku
@@ -123,7 +126,7 @@ fraud-guard-detection/
 - Meet Patel
 
 
-## License & Disclaimer ⚠️
+## License & Disclaimer 
 
 This project is developed for educational and research purposes. It should not be used for actual financial decision-making without proper validation, compliance measures, and regulatory approval.
 
