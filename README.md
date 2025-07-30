@@ -10,6 +10,7 @@
     <img src="https://img.shields.io/badge/-TensorFlow-black?style=for-the-badge&logoColor=white&logo=tensorflow&color=FF6F00" alt="tensorflow" />
     <img src="https://img.shields.io/badge/-scikit_learn-black?style=for-the-badge&logoColor=white&logo=scikitlearn&color=F7931E" alt="scikit-learn" />
     <img src="https://img.shields.io/badge/-Streamlit-black?style=for-the-badge&logoColor=white&logo=streamlit&color=FF4B4B" alt="streamlit" />
+    </div>
 
   <h3 align="center">🛡️ Fraud Guard - Credit Card Fraud Detection</h3>
 
