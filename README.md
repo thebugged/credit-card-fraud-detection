@@ -41,12 +41,12 @@ To set up this project locally, follow these steps:
 
 1. Clone the repository:
 ```shell
-git clone https://github.com/thebugged/data695-credit-card-fraud
+git clone https://github.com/thebugged/credit-card-fraud-detection
 ```
 
 2. Change into the project directory: 
 ```shell
-cd data695-credit-card-fraud
+cd credit-card-fraud-detection
 ```
 
 3. Create a virtual environment (recommended):

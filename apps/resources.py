@@ -212,7 +212,7 @@ def resources_page():
     st.markdown("### 💻 Code Repository")
     
     st.info("""
-    **GitHub Repository: https://github.com/thebugged/data695-credit-card-fraud**
+    **GitHub Repository: https://github.com/thebugged/credit-card-fraud-detection**
     
     The complete source code, datasets, trained models, and documentation are available in our GitHub repository.
     This includes:
