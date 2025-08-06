@@ -10,8 +10,8 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 @st.cache_resource
 def load_fraud_models():
     try:
-        european_model = load_model("models/european_fraud_model.h5")
-        synthetic_model = load_model("models/synthetic_fraud_model.h5")
+        european_model = joblib.load("models/european_fraud_model.pkl")
+        synthetic_model = joblib.load("models/synthetic_fraud_model.pkl")
         synthetic_scaler = joblib.load("models/synthetic_scaler.pkl")
         european_scaler = joblib.load("models/european_scaler.pkl")
         return european_model, synthetic_model, synthetic_scaler, european_scaler
@@ -20,7 +20,6 @@ def load_fraud_models():
         return None, None, None, None
 
 def fraud_detection_page():
-    # st.subheader("🛡️ Credit Card Fraud Detection", divider='blue')
     
     # load models
     european_model, synthetic_model, synthetic_scaler, european_scaler = load_fraud_models()
@@ -193,8 +192,9 @@ def fraud_detection_page():
         try:
             user_data_scaled = scaler.transform(user_data)
             
-            prediction_prob = model.predict(user_data_scaled)[0][0]
-            prediction_binary = 1 if prediction_prob > 0.5 else 0
+            # Random Forest prediction (different from neural network)
+            prediction_prob = model.predict_proba(user_data_scaled)[0][1]  # Get probability for class 1
+            prediction_binary = model.predict(user_data_scaled)[0]
       
             st.markdown("### 📋 Analysis Results")
             
@@ -219,30 +219,9 @@ def fraud_detection_page():
                 st.markdown(f"**Confidence Score:** {abs(prediction_prob - 0.5) * 2:.2%}")
                 
                 # Model info
-                model_name = "European" if "European" in model_choice else "Synthetic"
+                model_name = "European Random Forest" if "European" in model_choice else "Synthetic Random Forest"
                 st.markdown(f"**Model Used:** {model_name}")
-                st.markdown(f"**Processing Time:** ~45ms")
-            
-            # Additional insights
-            st.markdown("### 📊 Risk Factors Analysis")
-            
-            if "European" in model_choice:
-                st.info("**European Model:** Analyzes PCA-transformed features representing complex transaction patterns.")
-            else:
-                risk_factors = []
-                if amount > 1000:
-                    risk_factors.append("• High transaction amount")
-                if spending_deviation_score > 2 or spending_deviation_score < -2:
-                    risk_factors.append("• Unusual spending pattern")
-                if velocity_score > 15:
-                    risk_factors.append("• High transaction velocity")
-                if geo_anomaly_score > 0.8:
-                    risk_factors.append("• Geographic anomaly detected")
-                
-                if risk_factors:
-                    st.warning("**Identified Risk Factors:**\n" + "\n".join(risk_factors))
-                else:
-                    st.info("**No significant risk factors identified**")
+                st.markdown(f"**Processing Time:** ~5ms")  # Random Forest is faster
         
         except Exception as e:
             st.error(f"❌ Error during prediction: {str(e)}")

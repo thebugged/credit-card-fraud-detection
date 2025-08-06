@@ -34,28 +34,28 @@ def home_page():
     with col1:
         st.metric(
             label="🎯 Model Accuracy",
-            value="95.68%",
+            value="98.59%",
             delta="European Dataset"
         )
 
     with col2:
         st.metric(
             label="⚡ Detection Speed",
-            value="< 50ms",
+            value="< 5ms",
             delta="Real-time processing"
         )
 
     with col3:
         st.metric(
             label="🔍 Precision Rate",
-            value="97.56%",
+            value="99.87%",
             delta="Low false alarms"
         )
 
     with col4:
         st.metric(
             label="📊 Recall Rate", 
-            value="93.71%",
+            value="97.32%",
             delta="High fraud detection"
         )
 
@@ -107,10 +107,10 @@ def home_page():
         # Model Metrics
         models_data = pd.DataFrame({
             'Dataset': ['European Model', 'Synthetic Model'],
-            'Accuracy': [95.68, 53.00],
-            'Precision': [97.56, 33.37],
-            'Recall': [93.71, 41.11],
-            'AUC-ROC': [99.08, 49.93]
+            'Accuracy': [98.59, 42.68],  
+            'Precision': [99.87, 33.24],
+            'Recall': [97.32, 71.24],
+            'AUC-ROC': [99.95, 49.72]
         })
         
         fig = go.Figure()
@@ -136,7 +136,7 @@ def home_page():
     st.divider()
 
     # System Features
-    st.subheader('🎯 System Features')
+    st.subheader('System Features')
 
     feat_col1, feat_col2, feat_col3 = st.columns(3)
 
@@ -155,14 +155,14 @@ def home_page():
     with feat_col3:
         st.markdown('''
         - **User-Friendly**: Simple interface for transaction verification
-        - **Cloud Integration**: Azure ML Studio compatible
+        - **Scalable Architecture**: Optimized for large transaction volumes
         ''')
 
     
     st.markdown("")
 
     # Risk Factors 
-    st.subheader('⚠️ Common Fraud Risk Factors')
+    st.subheader('Common Fraud Risk Factors')
     
     risk_col1, risk_col2, risk_col3 = st.columns(3)
     
