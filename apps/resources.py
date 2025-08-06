@@ -9,7 +9,7 @@ def resources_page():
     
     with col1:
         st.markdown("""
-        **Project Title:** Cloud-Native Credit Card Fraud Detection
+        **Project Title:** Credit Card Fraud Detection
         
         **Team:** Group 4
         - Cecil Oiku
