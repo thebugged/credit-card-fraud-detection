@@ -108,5 +108,5 @@ fraud-guard-detection/
 
 This project is developed for educational and research purposes. It should not be used for actual financial decision-making without proper validation, compliance measures, and regulatory approval.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://fraud-guard.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ccfraud-guard.streamlit.app/)
 
